@@ -1,0 +1,2 @@
+[t=0] НАЧАЛО teachers=2 students=0 tickets=6 queue=3 prep=2..5 check=2 max=100 seed=17 ticket_mode=random grade_mode=random delay_ms=0
+[t=0] ИТОГ reason=complete admitted=0 completed=0 unfinished=0 rejected=0 peak_queue=0 waited=0 average=0.00

@@ -1,0 +1,20 @@
+[t=0] НАЧАЛО teachers=2 students=6 tickets=6 queue=3 prep=2..5 check=2 max=0 seed=17 ticket_mode=random grade_mode=random delay_ms=200
+[t=0] Студент 1 получил и сообщил билет 4.
+[t=0] Студент 1 начал подготовку; длительность 2.
+[t=0] Студент 2 получил и сообщил билет 6.
+[t=0] Студент 2 начал подготовку; длительность 2.
+[t=0] Студент 3 получил и сообщил билет 3.
+[t=0] Студент 3 начал подготовку; длительность 3.
+[t=0] Студент 4 получил и сообщил билет 5.
+[t=0] Студент 4 начал подготовку; длительность 3.
+[t=0] Студент 5 получил и сообщил билет 2.
+[t=0] Студент 5 начал подготовку; длительность 2.
+[t=0] Студент 6 получил и сообщил билет 1.
+[t=0] Студент 6 начал подготовку; длительность 2.
+[t=0] СТУДЕНТ id=1 ticket=4 state=preparing teacher=0 grade=0
+[t=0] СТУДЕНТ id=2 ticket=6 state=preparing teacher=0 grade=0
+[t=0] СТУДЕНТ id=3 ticket=3 state=preparing teacher=0 grade=0
+[t=0] СТУДЕНТ id=4 ticket=5 state=preparing teacher=0 grade=0
+[t=0] СТУДЕНТ id=5 ticket=2 state=preparing teacher=0 grade=0
+[t=0] СТУДЕНТ id=6 ticket=1 state=preparing teacher=0 grade=0
+[t=0] ИТОГ reason=interrupted admitted=6 completed=0 unfinished=6 rejected=0 peak_queue=0 waited=0 average=0.00
