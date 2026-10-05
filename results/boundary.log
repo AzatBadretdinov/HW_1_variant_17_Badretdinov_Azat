@@ -1,0 +1,10 @@
+[t=0] НАЧАЛО teachers=2 students=1 tickets=1 queue=3 prep=1..1 check=2 max=3 seed=17 ticket_mode=random grade_mode=random delay_ms=0
+[t=0] Студент 1 получил и сообщил билет 1.
+[t=0] Студент 1 начал подготовку; длительность 1.
+[t=1] Студент 1 закончил подготовку и готов передать работу.
+[t=1] Студент 1 передал работу; поставлен в очередь (1/3).
+[t=1] Преподаватель 1 начал проверку работы студента 1.
+[t=3] Преподаватель 1 закончил проверку студента 1; оценка 4.
+[t=3] Студент 1 получил свою оценку 4 и завершил экзамен.
+[t=3] СТУДЕНТ id=1 ticket=1 state=done teacher=1 grade=4
+[t=3] ИТОГ reason=complete admitted=1 completed=1 unfinished=0 rejected=0 peak_queue=1 waited=0 average=4.00

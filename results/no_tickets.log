@@ -1,0 +1,14 @@
+[t=0] НАЧАЛО teachers=2 students=6 tickets=0 queue=3 prep=2..5 check=2 max=100 seed=17 ticket_mode=random grade_mode=random delay_ms=0
+[t=0] Студент 1 не допущен: нет уникального билета.
+[t=0] Студент 2 не допущен: нет уникального билета.
+[t=0] Студент 3 не допущен: нет уникального билета.
+[t=0] Студент 4 не допущен: нет уникального билета.
+[t=0] Студент 5 не допущен: нет уникального билета.
+[t=0] Студент 6 не допущен: нет уникального билета.
+[t=0] СТУДЕНТ id=1 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] СТУДЕНТ id=2 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] СТУДЕНТ id=3 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] СТУДЕНТ id=4 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] СТУДЕНТ id=5 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] СТУДЕНТ id=6 ticket=0 state=not_admitted teacher=0 grade=0
+[t=0] ИТОГ reason=complete admitted=0 completed=0 unfinished=0 rejected=6 peak_queue=0 waited=0 average=0.00

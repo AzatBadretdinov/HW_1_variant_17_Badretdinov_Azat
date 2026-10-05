@@ -1,0 +1,34 @@
+make: Entering directory '/workspace/scratch/b04f7abadc6f/exam17'
+python3 tests/test_exam.py
+PASS normal
+PASS repeat
+PASS fixed
+PASS shortage
+PASS empty
+PASS no_tickets
+PASS timeout
+PASS boundary
+PASS unlimited
+PASS invalid_0
+PASS invalid_1
+PASS invalid_2
+PASS invalid_3
+PASS invalid_4
+PASS invalid_5
+PASS invalid_6
+PASS invalid_7
+PASS invalid_8
+PASS stress_1
+PASS stress_2
+PASS stress_3
+PASS stress_4
+PASS stress_5
+PASS stress_6
+PASS stress_7
+PASS stress_8
+PASS stress_9
+PASS stress_10
+PASS signal_2
+PASS signal_15
+ALL 30 TESTS PASSED
+make: Leaving directory '/workspace/scratch/b04f7abadc6f/exam17'

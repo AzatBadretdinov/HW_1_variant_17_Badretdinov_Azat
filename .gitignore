@@ -1,0 +1,9 @@
+/exam
+/exam.log
+/build/
+/results/demo/
+__pycache__/
+*.aux
+*.log
+*.out
+!results/*.log
