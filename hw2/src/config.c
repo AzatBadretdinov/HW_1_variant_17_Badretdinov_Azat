@@ -24,6 +24,7 @@ static void help(void) {
         "--log PATH        файл журнала (exam.log)\n"
         "--help            справка\n");
 }
+
 static int number(const char *text, int low, int high, int *out) {
     char *end;
     errno = 0;
@@ -32,6 +33,7 @@ static int number(const char *text, int low, int high, int *out) {
     *out = (int)value;
     return 1;
 }
+
 int parse_config(int argc, char **argv, Config *c) {
     *c = (Config){2, 6, 6, 2, 5, 2, 3, 100, 10, 1, 1, 17, "exam.log"};
     for (int i = 1; i < argc; ++i) {

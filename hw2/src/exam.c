@@ -21,6 +21,7 @@ typedef struct {
     sem_t result;
     pthread_t thread;
 } Student;
+
 typedef struct { Exam *exam; int id; pthread_t thread; } Teacher;
 struct Exam {
     const Config *c;
@@ -32,7 +33,8 @@ struct Exam {
     sem_t gate, slots, items;
     struct timespec start;
 };
-/* Only the main thread reads this signal flag; workers use mutex-protected stop. */
+
+/* Only the main thread reads this signal flag; workers use mutex-protected stop.  */
 static volatile sig_atomic_t interrupted;
 static void on_signal(int sig) { interrupted = sig; }
 static long long milliseconds(void) {
@@ -40,13 +42,16 @@ static long long milliseconds(void) {
     clock_gettime(CLOCK_MONOTONIC, &t);
     return (long long)t.tv_sec * 1000 + t.tv_nsec / 1000000;
 }
+
 static long long start_ms(const Exam *e) {
     return (long long)e->start.tv_sec * 1000 + e->start.tv_nsec / 1000000;
 }
+
 static void pause_ms(int ms) {
     struct timespec t = {ms / 1000, (long)(ms % 1000) * 1000000};
     while (nanosleep(&t, &t) < 0 && errno == EINTR) {}
 }
+
 static int write_all(int fd, const char *text, size_t n) {
     while (n) {
         ssize_t k = write(fd, text, n);
@@ -56,7 +61,7 @@ static int write_all(int fd, const char *text, size_t n) {
     }
     return 0;
 }
-/* Called with the mutex held, or after all workers have joined. */
+/*  Called with the mutex held, or after all workers have joined. */
 static void event(Exam *e, const char *format, ...) {
     char b[1024];
     int p = snprintf(b, sizeof b, "[ms=%lld] ", milliseconds() - start_ms(e));
@@ -79,7 +84,7 @@ static int wait_sem(sem_t *s) {
     while (sem_wait(s) < 0) if (errno != EINTR) return -1;
     return 0;
 }
-/* Long preparation/checking sleeps react to shutdown within approximately 10 ms. */
+/* Long  preparation/checking sleeps react to shutdown within approximately 10 ms. */
 static int delay(Exam *e, int units) {
     long long end = milliseconds() + (long long)units * (e->c->delay_ms ? e->c->delay_ms : 1);
     while (!stopped(e)) {
@@ -89,6 +94,7 @@ static int delay(Exam *e, int units) {
     }
     return 0;
 }
+
 static void *student_main(void *arg) {
     Student *s = arg;
     Exam *e = s->exam;
@@ -109,6 +115,7 @@ static void *student_main(void *arg) {
     s->state = READY;
     event(e, "Студент %d закончил подготовку и готов передать работу.\n", s->id + 1);
     pthread_mutex_unlock(&e->mutex);
+
     /* A slot is reserved before touching the queue. A full queue keeps work with its owner. */
     if (sem_trywait(&e->slots) < 0) {
         pthread_mutex_lock(&e->mutex);
