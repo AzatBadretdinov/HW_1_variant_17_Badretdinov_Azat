@@ -1,4 +1,5 @@
 #include "exam.h"
+
 int main(int argc, char **argv) {
     Config config;
     int result = parse_config(argc, argv, &config);
