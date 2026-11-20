@@ -1,0 +1,24 @@
+23 scenarios passed on Linux TCP (loopback and network interface).
+normal
+queue_fixed
+shortage
+empty
+no_tickets
+timeout
+missing_participant
+capacity
+monitor_reconnect
+server_signal_2
+server_signal_15
+teacher_reconnect
+student_reconnect
+offline_result
+framing_and_rejection
+stress_1
+stress_2
+stress_3
+stress_4
+stress_5
+network_interface
+invalid_options_6_cases
+connection_refused_3_roles
